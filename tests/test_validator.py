@@ -12,7 +12,7 @@ from kline_fixer import validate_klines
 @pytest.fixture
 def valid_klines() -> pd.DataFrame:
     opens = pd.date_range("2025-01-01", periods=5, freq="15min", tz="UTC")
-    open_ms = opens.astype("int64") // 1_000_000
+    open_ms = opens.as_unit("ms").astype("int64")
     return pd.DataFrame(
         {"open_time": open_ms, "close_time": open_ms + 899_999, "open": [100.0, 101.0, 102.0, 103.0, 104.0],
          "high": [102.0, 103.0, 104.0, 105.0, 106.0], "low": [99.0, 100.0, 101.0, 102.0, 103.0],
