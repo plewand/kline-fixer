@@ -2,8 +2,18 @@ from typing import cast
 
 import pandas as pd
 
-from kline_fixer.validator import DataSource, ValidationReport, ColumnValidator, Validator, TimestampValidator, \
-    CandleSequenceValidator, CloseTimeValidator, PriceValueValidator, OhlcBoundsValidator, PriceOutlierValidator
+from kline_fixer.validator import (
+    CandleSequenceValidator,
+    CloseTimeValidator,
+    ColumnValidator,
+    DataSource,
+    OhlcBoundsValidator,
+    PriceOutlierValidator,
+    PriceValueValidator,
+    TimestampValidator,
+    ValidationReport,
+    Validator,
+)
 
 DEFAULT_VALUE_COLUMNS = ("open", "high", "low", "close")
 DEFAULT_OPEN_TIME_COLUMN = "open_time"

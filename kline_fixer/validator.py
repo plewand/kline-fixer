@@ -41,7 +41,7 @@ class ValidationReport:
 
     @classmethod
     def valid(cls) -> ValidationReport:
-        return ValidationReport(tuple())
+        return ValidationReport(())
 
 
 class Validator(ABC):
